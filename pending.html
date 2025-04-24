@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Verification - GainFlow</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0fdf4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #4caf50;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+  <div class="min-h-screen flex flex-col justify-center items-center px-4">
+    <div class="bg-white p-8 rounded-xl shadow-xl w-full max-w-xl text-center">
+      <h1 class="text-2xl font-bold mb-4 text-center text-green-700">Payment Verification</h1>
+      <p class="mb-6 text-lg text-gray-600">We are verifying your payment. This may take a few minutes. Please be patient.</p>
+
+      <!-- Loader Animation -->
+      <div class="loader mb-6"></div>
+
+      <p class="text-sm text-gray-500 mb-4">Once your payment is verified, you'll receive a login link to your email. Please check your inbox for further instructions.</p>
+
+      <p class="text-xs text-gray-400">If your payment takes longer than expected, please contact support at <a href="gainflow31@gmail.com" class="text-blue-600">support@gainflow.com</a>.</p>
+
+      <!-- Status Check Button -->
+      <div class="mt-8">
+        <button onclick="checkStatus()" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
+          Check Payment Status
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function checkStatus() {
+      // Simulate checking the payment status
+      setTimeout(function() {
+        // Once payment is verified, redirect to the login page
+        window.location.href = "login.html"; // Redirect to the login page
+      }, 3000); // 3 seconds delay to simulate the verification process
+    }
+  </script>
+</body>
+</html>
