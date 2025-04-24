@@ -24,14 +24,14 @@
           <h2 class="text-lg font-semibold text-green-700">Option 1: Chipper Cash</h2>
           <p class="text-sm text-gray-600">Send payment to:</p>
           <p class="text-xl font-bold">@GainflowSignals</p>
-          <p class="text-sm text-gray-600">Once payment is made, upload your proof of payment to activate your account and gain full access.</p>
+          <p class="text-sm text-gray-600">Once payment is made, submit the details below to activate your account and gain full access.</p>
         </div>
 
         <!-- Bank Transfer -->
         <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
           <h2 class="text-lg font-semibold text-blue-700">Option 2: Bank Transfer</h2>
           <p class="text-sm text-gray-600">Bank: Zenith Bank<br>Account Name: Gainflow Signals<br>Account Number: 1234567890</p>
-          <p class="text-sm text-gray-600">Include your name or username as a reference in the transfer. Upload proof of payment after completing the transfer.</p>
+          <p class="text-sm text-gray-600">Include your name or username as a reference in the transfer. Submit your payment details below after completing the transfer.</p>
         </div>
 
         <!-- Opay Transfer -->
@@ -42,7 +42,7 @@
             <strong>Phone Number:</strong> 08012345678<br>
             <span class="text-xs text-gray-500">Use the phone number above in the Opay app to transfer. No extra charges.</span>
           </p>
-          <p class="text-sm text-gray-600">Once the payment is completed, upload the payment proof to activate your account.</p>
+          <p class="text-sm text-gray-600">Once the payment is completed, submit the details below to activate your account.</p>
         </div>
 
         <!-- Other Wallets -->
@@ -52,26 +52,31 @@
             <strong>Palmpay:</strong> 08087654321<br>
             <strong>USDT (TRC20):</strong> TSNw8H7fEhZLxxxxxxxxyyyyyyyyyy
           </p>
-          <p class="text-sm text-gray-600">For other wallets, ensure to upload proof of payment after making the payment.</p>
+          <p class="text-sm text-gray-600">For other wallets, ensure to submit the payment details below after making the payment.</p>
         </div>
       </div>
 
-      <!-- Upload Form for Proof of Payment -->
-      <form class="space-y-4 mt-8" method="POST" action="pending.html">
+      <!-- Upload Form for Payment Details -->
+      <form class="space-y-4 mt-8" action="https://formspree.io/f/mblojela" method="POST">
         <div>
-          <label class="block mb-1 font-medium">Your Email</label>
-          <input type="email" name="email" class="w-full border rounded px-3 py-2" required>
+          <label class="block mb-1 font-medium">Your Name</label>
+          <input type="text" name="name" class="w-full border rounded px-3 py-2" required>
         </div>
 
         <div>
-          <label class="block mb-1 font-medium">Upload Payment Screenshot</label>
-          <input type="file" name="proof" accept="image/*" class="w-full border rounded px-3 py-2" required>
+          <label class="block mb-1 font-medium">Account Number You Paid With</label>
+          <input type="text" name="account_number" class="w-full border rounded px-3 py-2" required>
         </div>
 
-        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700">Submit Payment Proof</button>
+        <div>
+          <label class="block mb-1 font-medium">Amount Paid</label>
+          <input type="number" name="amount" class="w-full border rounded px-3 py-2" required>
+        </div>
+
+        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700">Submit Payment Details</button>
       </form>
 
-      <p class="text-xs text-gray-400 mt-4 text-center">We will verify your payment within 24 hours. Ensure your name or username is visible in the screenshot for easy verification.</p>
+      <p class="text-xs text-gray-400 mt-4 text-center">We will verify your payment within 24 hours. Ensure your name or username is visible in the details for easy verification.</p>
     </div>
   </div>
 </body>
