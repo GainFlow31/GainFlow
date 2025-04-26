@@ -84,9 +84,17 @@
   </div>
 
   <script>
-window.location.href = "contact.html"; // Redirect immediately
-</script>
+// Capture the form submit event
+document.getElementById('paymentForm').addEventListener('submit', function(event) {
+    // Show a confirmation message or loading indicator
+    // If you want, you can add a message here that will be visible before redirect
 
+    // Redirect to pending.html after submission (immediately)
+    setTimeout(function() {
+        window.location.href = "pending.html";  // Redirect to pending page after submission
+    }, 100);  // Delay of 100 milliseconds (just to ensure submission first)
+});
+</script>
 
 </body>
 </html>
